@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by Dynatrace Client 6.5.0 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.datacom.servicedeskAction" name="Service Desk r12 Automatic Ticket Logging Plugin">
+    <information>
+      <category value="" />
+      <displayname value="ServiceDeskActionPlugin" />
+      <description value="Automatically logs tickets in Service Desk r12 when Incidents are detected in dynatrace" />
+      <supportlevel value="unsupported" />
+    </information>
+    <configuration>
+      <property key="tenant" label="Tenant" type="string" description="The Tenant" default="" multiline="false" />
+      <property key="user" label="User" type="string" description="User to log incident against" default="Default User" multiline="false" />
+      <property key="reporter" label="Reporter" type="string" description="User to act as Reporter of the incident" default="Default Reporter" multiline="false" />
+      <property key="area" label="Incident Area" type="string" description="The incident area" default="default" multiline="false" />
+      <property key="priority" label="Priority" type="string" description="The priority of this incident" default="p4" multiline="false" />
+      <property key="configItem" label="Configuration Item" type="string" description="The configuration Item" default="default" multiline="false" />
+      <property key="group" label="Assigned Group" type="string" description="Group assigned to the ticket" default="default" multiline="false" />
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.action" id="com.datacom.servicedeskAction.action" name="Service Desk Action Plugin">
+    <plugin configid="com.datacom.servicedeskAction" class="com.datacom.servicedeskAction.ActionPlugin" />
+  </extension>
+</plugin>

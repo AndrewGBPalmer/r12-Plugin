@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.datacom.servicedeskAction;singleton:=true
+Bundle-Name: Service Desk r12 Automatic Ticket Logging Plugin
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Require-Bundle: com.dynatrace.diagnostics.sdk
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Datacom
+
